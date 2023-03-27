@@ -16,11 +16,11 @@ class CreateTeamsTable extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->string('team name');
-            $table->integer('area');
-            $table->integer('time');
-            $table->integer('level');
-            $table->text('profile');
+            $table->string('team_name');
+            $table->string('area');
+            $table->string('time');
+            $table->string('level');
+            $table->string('profile');
             $table->string('team_icon');
             $table->timestamps();
         });

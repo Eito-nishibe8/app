@@ -20,9 +20,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->text('profile');
-            $table->tinyInteger('role');
-            $table->string('icon');
+            $table->tinyInteger('role')->default(1); // 0:個人 , 1:チーム
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }
