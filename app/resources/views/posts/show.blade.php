@@ -6,16 +6,15 @@
         <h1>{{ $post['title'] }}</h1>
     </div>
 
-    <div class=" mt-5" style="width: 70rem; height: 30rem">
-        <div class="row g-0">
+    <div class=" mt-5">
+        <div class="row">
             <div class="col-md-4">
-                <img src="{{ asset('storage/image/'.$post->image) }}" alt="...">
+                <img src="{{ asset('storage/image/'.$post->image) }}" alt="..." style="width:350px;height: 350px; border-radius: 50px; background-color: #d3d3d3;">
             </div>
-            <div class="card col-md-8">
-                <div class="card-body">
-                    <p class="card-text">{{ $post['episode'] }}</p>
-                </div>
-            </div>
+            <textarea class="card-body" style="border-radius: 20px; background-color: #d3d3d3;">
+            {{ $post['episode'] }}
+            </textarea>
+
         </div>
     </div>
     @if($post->user_id==Auth::id())

@@ -10,6 +10,7 @@ use App\Like;
 
 use App\Http\Requests\TeamsCreateRequest;
 
+use App\Http\Requests\TeamUpdateRequest;
 
 
 use Illuminate\Http\Request;
@@ -177,7 +178,7 @@ class TeamController extends Controller
      * @return \Illuminate\Http\Response
      */
     //チーム情報編集
-    public function update(Request $request, $id)
+    public function update(TeamsCreateRequest $request, $id)
     {
         $team =  Team::find($id);
 

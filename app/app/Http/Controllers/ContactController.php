@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Contact;
+use App\User;
+
 use App\Http\Requests\ContactStoreRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request as FacadesRequest;
@@ -19,7 +21,7 @@ class ContactController extends Controller
     //お問い合わせ
     public function index()
     {
-        $contacts = Contact::where('team_id', Auth::user()->team->id)->paginate(1);
+        $contacts = Contact::join('users','contacts.user_id','users.id')->where('team_id', Auth::user()->team->id)->paginate(1);
 
         return view('contacts.index', [
             'contacts' => $contacts,

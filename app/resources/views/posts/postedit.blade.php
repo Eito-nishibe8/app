@@ -22,14 +22,14 @@
             </div>
         </div>
 
-        <div class="card mx-auto mt-5" style="max-width: 900px; height: 400px">
-            <div class="row no-gutters">
-                <div class="col-md-4">
+        <div class="card mx-auto mt-5" style="border-radius: 50px; background-color: #d3d3d3;">
+            <div class="row">
+                <div class="col-md-4 mt-5">
                     <input id="name" type="file" name="image" value="{{ old('image') }}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <textarea class="form-control" style="resize: none; height: 350px" id="exampleFormControlTextarea1" rows="3" name="episode">{{old('episode',$post->episode)}}</textarea>
+                        <textarea class="form-control" style=" height: 350px;border: 1px solid gray; border-radius: 20px; background-color: #d3d3d3;" id="exampleFormControlTextarea1" rows="3" name="episode">{{old('episode',$post->episode)}}</textarea>
                     </div>
                 </div>
             </div>

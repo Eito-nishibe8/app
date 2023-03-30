@@ -10,6 +10,8 @@ use App\User;
 
 use App\Like;
 
+use App\Http\Requests\PostCreateRequest;
+
 use App\Http\Requests\PostUpdateRequest;
 
 
@@ -70,7 +72,7 @@ class PostController extends Controller
      */
 
     //登録処理
-    public function store(Request $request)
+    public function store(PostCreateRequest $request)
     {
         $post = new Post;
 
@@ -154,7 +156,7 @@ class PostController extends Controller
 
         $user->save();
 
-        return redirect()->route('teampage');
+        return redirect()->route('posts.index');
     }
 
 

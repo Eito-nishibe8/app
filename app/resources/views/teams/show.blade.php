@@ -2,16 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <img src="{{$team->team_icon ? asset('storage/image/'.$team->team_icon) : asset('storage/noImage.png')}}" class="img-circle" alt="" width="200" height="150">
-        <div class="col mb-3">
-            <h1>チーム名　　：　　{{$team->team_name}}</h1>
-            <h2 class="mt-5">エリア　　　：　　{{$team->area}}</h2>
-            <h2 class="mt-5">レベル　　　：　　{{$team->level}}</h2>
-            <h2 class="mt-5">時間帯　　　：　　{{$team->time}}</h2>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-link d-flex align-items-start float-right">戻る</button>
+    <div class="row justify-content-center mt-5">
+        <img src="{{$team->team_icon ? asset('storage/image/'.$team->team_icon) : asset('storage/noImage.png')}}" class="img-circle" style="margin: 60px; width: 240px; height: 240px;">
+        <div class="mb-3">
+            <h2 style="border: solid 6px #808080;padding: 1rem;">チーム名　　：　　{{$team->team_name}}</h2>
+            <h2 style="border: solid 6px #808080;padding: 1rem;">エリア　　　：　　{{$team->area}}</h2>
+            <h2 style="border: solid 6px #808080;padding: 1rem;">レベル　　　：　　{{$team->level}}</h2>
+            <h2 style="border: solid 6px #808080;padding: 1rem;">時間帯　　　：　　{{$team->time}}</h2>
         </div>
     </div>
     <div class="col-md-8 mx-auto">
@@ -50,10 +47,11 @@
         height: 300px;
         object-fit: cover;
     }
-    .img-circle{
+
+    .img-circle {
         width: 200px;
         height: 200px;
         object-fit: cover;
-        border-radius:50%;
+        border-radius: 50%;
     }
 </style>

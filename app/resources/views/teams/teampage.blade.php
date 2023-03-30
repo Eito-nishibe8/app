@@ -4,17 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col mb-3">
-            <h3>チームマイページ</h3>
+            <h1>チームマイページ</h1>
         </div>
     </div>
     <div class="row justify-content-center mt-5 ml-5">
 
-        <img src="{{ asset('storage/image/'.$team['team_icon']) }}" class="img-circle" alt="参考画像" width="200" height="150">
-        <div class="col ml-5">
-            <h3>チーム名　　　　{{ $team['team_name'] }}</h3>
-            <h3 class="mt-5">エリア　　　　　{{ $team['area'] }}</h3>
-            <h3 class="mt-5">レベル　　　　　{{ $team['level'] }}</h3>
-            <h3 class="mt-5">時間帯　　　　　{{ $team['time'] }}</h3>
+        <img src="{{ asset('storage/image/'.$team['team_icon']) }}" class="img-circle" style="width: 200px; height: 200px;">
+        <div class="ml-5">
+            <h2 style="border: solid 6px #808080;padding: 1rem;">チーム名　　　　{{ $team['team_name'] }}</h2>
+            <h2 class="" style="border: solid 6px #808080;padding: 1rem;">エリア　　　　　{{ $team['area'] }}</h2>
+            <h2 class="" style="border: solid 6px #808080;padding: 1rem;">レベル　　　　　{{ $team['level'] }}</h2>
+            <h2 class="" style="border: solid 6px #808080;padding: 1rem;">時間帯　　　　　{{ $team['time'] }}</h2>
         </div>
         <div class="col-md-8 mt-5">
             <div class="row">
@@ -36,7 +36,7 @@
         </a>
     </div>
     <div class="low mt-5 border-bottom border-dark"></div>
-    <h3 class="row justify-content-center mt-3">チーム投稿</h3>
+    <h2 class="row justify-content-center mt-3 mb-5">チーム投稿</h2>
 
     <div class="row justify-content-around">
         @foreach($posts as $post)

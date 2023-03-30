@@ -12,24 +12,21 @@
             <label for="name" class="col-md-4 col-form-label text-md-right ml-5">{{ __('タイトル') }}</label>
 
             <div class="col-md-3">
-                <input id="name" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="name" autofocus>
-
-                @error('name')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
+                <input id="name" type="text" class="form-control" name="title" value="{{ old('title') }}" autofocus>
+                <label for="exampleFormControlTextarea1" class="form-label">@error('title')<span style='color:red'>※{{ $message }}</span>@enderror</label>
             </div>
         </div>
 
-        <div class="card mx-auto mt-5" style="max-width: 900px; height: 400px">
+        <div class="card mx-auto mt-5" style="border-radius: 20px; background-color: #d3d3d3; max-width: 900px; height: 400px">
             <div class="row no-gutters">
-                <div class="col-md-4">
+                <div class="col mt-5">
                     <input id="name" type="file" name="image" value="{{ old('image') }}">
+                    <label for="exampleFormControlTextarea1" class="form-label">@error('image')<span style='color:red'>※{{ $message }}</span>@enderror</label>
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body">
-                        <textarea class="form-control" style="resize: none; height: 350px" id="exampleFormControlTextarea1" rows="3" name="episode" value="{{ old('episode') }}"></textarea>
+                    <div class="card-body" style="border-radius: 20px; background-color: #d3d3d3;">
+                        <textarea class="form-control" style="resize: none; height: 330px" id="exampleFormControlTextarea1" rows="3" name="episode" value="{{ old('episode') }}"></textarea>
+                        <label for="exampleFormControlTextarea1" class="form-label">@error('episode')<span style='color:red'>※{{ $message }}</span>@enderror</label>
                     </div>
                 </div>
             </div>

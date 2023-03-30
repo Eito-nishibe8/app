@@ -68,6 +68,7 @@
                                     {{ __('個人アカウント作成') }}
                                 </button>
                             </div>
+                            <img class="logo" src="{{ asset('Football.png') }}" style="width: 80px; height: 80px; margin-left: 30px">
                         </div>
                     </form>
                 </div>

@@ -15,7 +15,7 @@
         <tbody>
             <a href="{{ route('contacts.index',$contact->id )}}">
                 <tr>
-                    <th scope="row">{{$contact->user_id}}</th>
+                    <th scope="row">{{$contact->name}}</th>
                     <td>{{$contact->email}}</td>
                     <td>{{$contact->tel}}</td>
                     <td>{{$contact->message}}</td>

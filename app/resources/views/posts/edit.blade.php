@@ -13,7 +13,7 @@
 
     <div class="row justify-content-center mt-5 ml-5">
         @if(Auth::user()->icon==null)
-        <img src="{{ asset('noImage.png') }}" width="200" height="150">
+        <img src="{{ asset('noImage.png') }}" style="display: block; margin: auto;" class="img-circle" width="200" height="150">
         @else
         <img src="{{ asset('storage/image/'.Auth::user()->icon ) }}" class="img-circle" width="200" height="150">
         @endif
@@ -24,7 +24,7 @@
                         <label for="name" class="col-md-4"></label>
 
                         <div class="col-md-6">
-                            <input id="name" type="file" class="form-control @error('icon') is-invalid @enderror" name="icon" value="{{ old('icon') }}" autofocus>
+                            <input type="file" class="@error('icon') is-invalid @enderror" name="icon" value="{{ old('icon') }}" autofocus>
 
                             @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -69,12 +69,11 @@
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
-</div>
-</div>
-
-</div>
-
 @endsection
 <style>
     img {

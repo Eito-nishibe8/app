@@ -69,6 +69,7 @@
                                     {{ __('チームアカウント作成') }}
                                 </button>
                             </div>
+                            <img class="logo" src="{{ asset('Football.png') }}" style="width: 80px; height: 80px; margin-left: 20px">
                         </div>
                     </form>
                 </div>

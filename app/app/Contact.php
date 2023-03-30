@@ -12,4 +12,8 @@ class Contact extends Model
     {
         return $this->belongsTo('App\Team');
     }
+    public function user()
+    {
+        return $this->belongsTo('App/User');
+    }
 }

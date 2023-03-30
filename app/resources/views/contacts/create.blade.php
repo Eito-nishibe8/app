@@ -9,20 +9,20 @@
         @csrf
         <input type="hidden" class="form-control" name="team_id" id="exampleInputName1" value="{{$id}}">
         <div class="row mt-5" style="max-width: 900px">
-            <label for="exampleInputName1" class="form-label">氏名 : {{Auth::user()->name}}</label>
+            <label for="exampleInputName1" class="form-label" style="font-size: 30px;">氏名 : {{Auth::user()->name}}</label>
         </div>
 
         <div class="row mt-5" style="max-width: 900px">
-            <label for="exampleInputEmail1" class="form-label">メールアドレス : {{Auth::user()->email}}</label>
+            <label for="exampleInputEmail1" class="form-label" style="font-size: 30px;">メールアドレス : {{Auth::user()->email}}</label>
         </div>
 
         <div class="row mt-5" style="max-width: 900px">
-            <label for="exampleInputTel1" class="form-label">電話番号 @error('tel')<span style='color:red'>※{{ $message }}</span>@enderror</label>
+            <label for="exampleInputTel1" class="form-label" style="font-size: 20px;">電話番号 @error('tel')<span style='color:red'>※{{ $message }}</span>@enderror</label>
             <input type="tel" class="form-control" name="tel" id="exampleInputTel1">
         </div>
 
         <div class="row mt-5" style="max-width: 900px">
-            <label for="exampleFormControlTextarea1" class="form-label">お問い合わせ内容 @error('message')<span style='color:red'>※{{ $message }}</span>@enderror</label>
+            <label for="exampleFormControlTextarea1" class="form-label" style="font-size: 20px;">お問い合わせ内容 @error('message')<span style='color:red'>※{{ $message }}</span>@enderror</label>
             <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 

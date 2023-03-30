@@ -4,18 +4,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col mb-3">
-            <h3>一般マイページ</h3>
+            <h1>一般マイページ</h1>
         </div>
     </div>
     <div class="row justify-content-center mt-5 ml-5">
         @if(Auth::user()->icon==null)
-        <img src="{{ asset('noImage.png') }}" class="img-circle" width="200" height="150">
+        <img src="{{ asset('noImage.png') }}" class="img-circle" style="margin-right: 70px; width: 220px; height: 200px;">
         @else
-        <img src="{{ asset('storage/image/'.Auth::user()->icon) }}" class="img-circle" width="200" height="150">
+        <img src="{{ asset('storage/image/'.Auth::user()->icon) }}" class="img-circle" style="margin-right: 70px; width: 220px; height: 200px;">
         @endif
-        <div class="col ml-5">
-            <h3>ユーザー名　　　　　　{{Auth::user()->name}}</h3>
-            <h3 class="mt-5">メールアドレス　　　　{{Auth::user()->email}}</h3>
+        <div class="col">
+            <h2 style="border: solid 6px #808080;padding: 1rem;">ユーザー名　　　　　　{{Auth::user()->name}}</h2>
+            <h2 class="mt-5" style="border: solid 6px #808080;padding: 1rem;">メールアドレス　　　　{{Auth::user()->email}}</h2>
         </div>
     </div>
 
